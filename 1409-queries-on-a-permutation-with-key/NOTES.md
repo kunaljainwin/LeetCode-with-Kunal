@@ -1,0 +1,1 @@
+https://leetcode.com/problems/queries-on-a-permutation-with-key/discuss/575019/Python-Fenwick-tree-O(n-log-n)
