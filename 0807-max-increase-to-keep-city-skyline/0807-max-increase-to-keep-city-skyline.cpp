@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {
-        // total sum for max type grid - present grid
+ 
         int n=grid.size();
         int m=grid[0].size();
         vector<int>row(n);
