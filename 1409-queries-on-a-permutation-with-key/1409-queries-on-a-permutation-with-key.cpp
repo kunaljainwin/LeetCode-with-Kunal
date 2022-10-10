@@ -1,6 +1,10 @@
 class Solution {
 public:
     vector<int> processQueries(vector<int>& queries, int m) {
+        
+        
+        
+        //originally made for fenwick solution
         vector<int>arr(m);
         int n=queries.size();
                 vector<int>ans(n);
