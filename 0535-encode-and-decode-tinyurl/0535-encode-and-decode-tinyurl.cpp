@@ -1,17 +1,16 @@
 class Solution {
-    private:
-    string url;
+    
 public:
 
     // Encodes a URL to a shortened URL.
     string encode(string lU) {
-        return url=lU;
+return lU;
         
     }
 
     // Decodes a shortened URL to its original URL.
     string decode(string sU) {
-        return this->url;
+return sU;
     }
 };
 
