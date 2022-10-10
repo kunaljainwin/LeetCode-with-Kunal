@@ -1,12 +1,12 @@
 class Solution {
 public:
     int numberOfBeams(vector<string>& bank) {
-        int n=bank.size(),ans=0,prev=0;
-        for(int i=0;i<n;i++){
-            int c=count(bank[i].begin(),bank[i].end(),'1');
+        int ans=0,prev=0;
+        for(auto &it:bank){
+            int c=count(it.begin(),it.end(),'1');
             
             if(c){
-                            ans+=prev*c;
+            ans+=prev*c;
             prev=c;
             }
         }
