@@ -6,15 +6,11 @@ public:
         int m=grid[0].size();
         vector<int>row(n);
         vector<int>col(m);
-        for(int i=0;i<n;i++){
-            row[i]=*max_element(grid[i].begin(),grid[i].end());
-        }
-        for(int i=0;i<m;i++){
-            int mx=0;
-           for(int j=0;j<n;j++){
-               mx=max(mx,grid[j][i]);
-           }
-            col[i]=mx;
+          for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                row[i] = max(row[i], grid[i][j]);
+                col[j] = max(col[j], grid[i][j]);
+            }
         }
         int ans=0;
         for(int i=0;i<n;i++){
