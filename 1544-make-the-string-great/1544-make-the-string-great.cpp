@@ -2,17 +2,23 @@ class Solution {
 public:
     string makeGood(string s) {
           int n=s.length();
-        
-        for(int i=0;i<n-1;i++){
-            if(abs(s[i]-s[i+1])==97-65){
-                s.erase(s.begin()+i,s.begin()+i+2);
-          
-                // cout<<s<<endl;
-                n-=2;
-                i=-1;
-            
+        stack<char>stk;
+        for(auto &it:s){
+            if(stk.empty())
+                stk.push(it);
+            else if(abs(stk.top()-it)==32){
+                stk.pop();
+            }
+            else{
+                stk.push(it);
             }
         }
+        s="";
+        while(!stk.empty()){
+            s=stk.top()+s;
+            stk.pop();
+        }
+        
         return s;
     }
 };
