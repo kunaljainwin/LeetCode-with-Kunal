@@ -13,17 +13,16 @@ public:
     ListNode* deleteMiddle(ListNode* head) {
         ListNode*slow=head;
         ListNode*fast=head;
-                ListNode*prev=NULL;
+        ListNode*prev=NULL;
         while(fast!=NULL&&fast->next!=NULL){
-          prev=slow;
+            prev=slow;
             slow=slow->next;
             fast=fast->next->next;
         }
-        // cout<<slow->val<<endl;
         if(head->next==NULL){
             head=NULL;
         }else{
-               prev->next=slow->next;
+            prev->next=slow->next;
         }
      
         
