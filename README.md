@@ -1,2 +1,2 @@
 # LeetCode-with-Kunal
-Collection of LeetCode questions -solution of kunal
+Collection of LeetCode questions accepted solution by owner
