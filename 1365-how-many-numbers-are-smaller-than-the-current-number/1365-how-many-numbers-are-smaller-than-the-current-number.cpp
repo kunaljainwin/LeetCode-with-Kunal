@@ -1,7 +1,8 @@
 class Solution {
 public:
     vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
-         
+         // could use set for nlogn complexity
+        // Test case size is very small
         int n=nums.size();
          vector<int>ans(n);
      
