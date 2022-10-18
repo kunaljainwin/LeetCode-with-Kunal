@@ -5,9 +5,9 @@ public:
         if(n==1)
             return "1";
         string say=countAndSay(n-1);
-    int count=0;
+        int count=0;
         char c=say[0];
-               string result="";
+        string result="";
         for(int i=0;i<say.length();i++){
             if(say[i]==c){
                 count++;
@@ -19,7 +19,7 @@ public:
               
             }
         }
-        if(count>0){
+        if(count){
               result+=to_string(count)+c;
         }
  
