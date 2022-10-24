@@ -3,12 +3,12 @@ public:
     
     int bitmask(string s){
         int r=0;
-        vector<int>arr(26,0);
+        vector<bool>arr(26,true);
         for(auto &it:s){
             int i=it-'a';
-            if(!arr[i]){
+            if(arr[i]){
                    r+=pow(2,i);
-                arr[i]=1;
+                arr[i]=false;
             }
          
             else
@@ -45,7 +45,7 @@ public:
         set<int>maskedarr;
         for(auto &it:arr){
             maskedarr.insert(bitmask(it));
-            cout<<bitmask(it)<<" ";
+            // cout<<bitmask(it)<<" ";
         }
         maskedarr.insert(-1);
         auto it=maskedarr.find(-1);
