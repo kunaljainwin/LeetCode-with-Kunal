@@ -1,25 +1,21 @@
 class MyHashSet {
     private:
-    map<int,int>maps;
+    vector<bool>arr;
 public:
-    
     MyHashSet() {
-        
+        arr=vector<bool>(1000006,false);
     }
     
     void add(int key) {
-        maps[key]=1;
+        arr[key]=true;
     }
     
     void remove(int key) {
-        maps[key]=0;
-
+        arr[key]=false;
     }
     
     bool contains(int key) {
-         
-        
-        return maps[key];
+        return arr[key];
     }
 };
 
