@@ -13,7 +13,7 @@ public:
         
         vector<vector<string>>ans;
         for(auto &it:data){
-            ans.push_back(vector<string>(it.second.begin(),it.second.end()));
+            ans.push_back(it.second);
         }
         
         
