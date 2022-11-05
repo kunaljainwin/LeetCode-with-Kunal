@@ -4,11 +4,7 @@ public:
         if(k==w.length())
             return true;
         
-        if(i<0||i>=b.size()||j<0||j>=b[0].size())
-            return false;
-        if(visited[i][j])
-            return false;
-        if(b[i][j]!=w[k])
+        if(i<0||i>=b.size()||j<0||j>=b[0].size()||visited[i][j]||b[i][j]!=w[k])
             return false;
        
         visited[i][j]=true;
