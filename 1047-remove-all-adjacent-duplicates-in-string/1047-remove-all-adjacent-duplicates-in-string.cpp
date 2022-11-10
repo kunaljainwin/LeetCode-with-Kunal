@@ -6,7 +6,7 @@ public:
         string ans="";
         for(auto &it:s){
             if(ans.empty()){
-                ans.push_back(it);
+                ans+=it;
                 continue;
             }
             if(it==ans.back())
@@ -14,7 +14,7 @@ public:
                 ans.pop_back();
             }
             else{
-                ans.push_back(it);
+                ans+=it;
             }
         }
         // string ans="";
