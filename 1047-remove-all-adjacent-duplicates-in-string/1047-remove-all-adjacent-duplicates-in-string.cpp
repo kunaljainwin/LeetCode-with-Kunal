@@ -2,25 +2,28 @@ class Solution {
 public:
     string removeDuplicates(string s) {
         // again a simple stack string ques
-        stack<char>stk;
+        // stack<char>stk;
+        string ans="";
         for(auto &it:s){
-            if(stk.empty()){
-                stk.push(it);
+            if(ans.empty()){
+                ans.push_back(it);
                 continue;
             }
-            if(it==stk.top())
+            if(it==ans.back())
             {
-                stk.pop();
+                ans.pop_back();
             }
             else{
-                stk.push(it);
+                ans.push_back(it);
             }
         }
-        string ans="";
-        while(!stk.empty()){
-            ans=stk.top()+ans;
-            stk.pop();
-        }
+        // string ans="";
+        // while(!.empty()){
+        //     ans=stk.top()+ans;
+        //     stk.pop();
+        // }
+                // cout<<ans.back();
+
         return ans;
     }
 };
