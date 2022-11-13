@@ -17,9 +17,9 @@ public:
                 if (ini != -1) {
                     n = fin - ini;
                     for (int k = 0; k < n/2; k++) {
-                        c = s[ini + k];
-                        s[ini + k] = s[ini + n - 1 - k];
-                        s[ini + n - 1 - k] = c;
+                      
+                        swap(s[ini + k] , s[ini + n - 1 - k]);
+            
                     }
                 }
                 ini = -1;
