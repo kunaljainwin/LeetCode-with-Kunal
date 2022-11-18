@@ -4,11 +4,13 @@ class Solution:
         r=len(nums)-1
         ans=[]
         while l<=r:
-            if nums[l]**2>nums[r]**2:
-                ans.insert(0,nums[l]**2)
+            a=nums[l]**2
+            b=nums[r]**2
+            if a>b:
+                ans.insert(0,a)
                 l+=1
             else:
-                ans.insert(0,nums[r]**2)
+                ans.insert(0,b)
                 r-=1
             
         return ans
