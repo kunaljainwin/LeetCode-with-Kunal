@@ -4,7 +4,7 @@ class Solution:
         r=len(nums)-1
         ans=[]
         while l<=r:
-            if abs(nums[l])>abs(nums[r]):
+            if nums[l]**2>nums[r]**2:
                 ans.insert(0,nums[l]**2)
                 l+=1
             else:
