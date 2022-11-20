@@ -25,29 +25,34 @@ public:
     dp[2]=1;
         //step2 complexity - O(3^n) ❌
         //do dp optimization
-        int ans=0;
-        if(dp[n-3]!=-1){
-            ans+=dp[n-3];
-        }
+       if(dp[n]!=-1){
+           return dp[n];
+       }
         else{
-            dp[n-3]=tribonacci(n-3);
-               ans+=dp[n-3];
+            return dp[n]=tribonacci(n-3)+tribonacci(n-2)+tribonacci(n-1);
         }
-        if(dp[n-2]!=-1){
-            ans+=dp[n-2];
-        }
-        else{
-            dp[n-2]=tribonacci(n-2);
-             ans+=dp[n-2];
-        }
-        if(dp[n-1]!=-1){
-            ans+=dp[n-1];
-        }
-        else{
-            dp[n-1]=tribonacci(n-1);
-                 ans+=dp[n-1];
-        }
-        dp[n]=ans;
-        return ans;
+        // if(dp[n-3]!=-1){
+        //     ans+=dp[n-3];
+        // }
+        // else{
+        //     dp[n-3]=tribonacci(n-3);
+        //        ans+=dp[n-3];
+        // }
+        // if(dp[n-2]!=-1){
+        //     ans+=dp[n-2];
+        // }
+        // else{
+        //     dp[n-2]=tribonacci(n-2);
+        //      ans+=dp[n-2];
+        // }
+        // if(dp[n-1]!=-1){
+        //     ans+=dp[n-1];
+        // }
+        // else{
+        //     dp[n-1]=tribonacci(n-1);
+        //          ans+=dp[n-1];
+        // }
+        // dp[n]=ans;
+        // return ans;
     }
 };
