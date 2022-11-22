@@ -17,7 +17,7 @@ public:
         if( a<0||b<0||c<0||d<0)
             return INT_MIN;
         
-        return 1+ a+b+c+d;
+        return 1+a+b+c+d;
         
     }
     int numEnclaves(vector<vector<int>>& grid) {
