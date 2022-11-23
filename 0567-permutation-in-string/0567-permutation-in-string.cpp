@@ -1,12 +1,13 @@
 class Solution {
 public:
-    bool check( unordered_map<char,int>mp,int n,string &s2,int i){
-        for(int x=i;x<s2.length()&&n--;x++){
-            if(mp[s2[x]]<=0){
+    // replcae map with a array
+    bool check( vector<int> mp,int n,string &s2,int i){
+        for(int x=i;n--!=0;x++){
+            if(mp[s2[x]-'a']<=0){
                 return false; 
             }
             else{
-                mp[s2[x]]--;
+                mp[s2[x]-'a']--;
             }
         }
         return true;
@@ -14,10 +15,10 @@ public:
     bool checkInclusion(string s1, string s2) {
         if(s1.length()>s2.length())
             return false;
-        unordered_map<char,int>mp;
+       vector<int>mp(26,0);
         int n=s1.length();
         for(auto &it:s1){
-            mp[it]++;
+            mp[it-'a']++;
         }
         for(int i=0;i<=s2.length()-s1.length();i++){
             
