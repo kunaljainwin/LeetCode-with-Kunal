@@ -4,13 +4,9 @@ public:
         // no swap is also available count==0
         // find places where differ and count
         int count=0;//should not exceed 2
-    int a=-1,b=-1;
-        
+        int a=-1,b=-1;
         for(int i=0;i<s1.length();i++){
-            if(s1[i]==s2[i]){
-                
-            }
-            else{
+            if(s1[i]!=s2[i]){
                 if(a==-1){
                     a=i;
                 }
@@ -20,16 +16,11 @@ public:
                 count++;
             }
         }
-        if((count==0||count==2)){
-            if(count==0){
-                return true;
-            }
-            else if(s1[a]==s2[b]&&s1[b]==s2[a]){
-                return true;
-            }
-            else{
-                return false;
-            }
+        if(count==0){
+            return true;
+        }
+        else if(count==2&&s1[a]==s2[b]&&s1[b]==s2[a]){
+            return true;
         }
         else {
             return false;
