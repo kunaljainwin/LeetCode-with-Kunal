@@ -9,5 +9,5 @@ SELECT employee_id
 FROM Salaries as S
 WHERE  employee_id NOT IN  (SELECT employee_id FROM Employees)
 
-ORDER BY employee_id
+ORDER BY 1
 
