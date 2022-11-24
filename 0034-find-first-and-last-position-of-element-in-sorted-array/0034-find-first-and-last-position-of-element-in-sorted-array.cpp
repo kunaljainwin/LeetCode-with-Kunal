@@ -7,20 +7,12 @@ public:
         
         
         auto l=lower_bound(nums.begin(),nums.end(),target);
-        auto r=lower_bound(nums.begin(),nums.end(),target+1);
+        auto r=upper_bound(nums.begin(),nums.end(),target);
         int a,b;
-        if(l==nums.end()){
-            a=-1;
-        }
-        else{
+
             a=l-nums.begin();
-        }
-        if(r==nums.end()&&*nums.rbegin()!=target){
-            b=-1;
-        }
-        else{
             b=r-nums.begin()-1;
-        }
+        
         return {a,b};
     }
 };
