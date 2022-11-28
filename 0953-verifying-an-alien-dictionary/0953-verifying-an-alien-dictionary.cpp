@@ -15,13 +15,14 @@ cout<<it<<" ";
                 it2=mp[it2];
             }
         }
-        vector<string> w(words.begin(),words.end());
-        sort(w.begin(),w.end());
-        for(int i=0;i<words.size();i++){
-            if(words[i].compare(w[i])!=0){
-                return false;
-            }
-        }
+        // vector<string> w(words.begin(),words.end());
+        // sort(w.begin(),w.end());
+        // for(int i=0;i<words.size();i++){
+        //     if(words[i].compare(w[i])!=0){
+        //         return false;
+        //     }
+        // }
+        return is_sorted(words.begin(),words.end());
         return true;
     }
 };
