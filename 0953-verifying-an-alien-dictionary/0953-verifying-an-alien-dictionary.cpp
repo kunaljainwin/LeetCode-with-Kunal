@@ -1,18 +1,18 @@
 class Solution {
 public:
     bool isAlienSorted(vector<string>& words, string order) {
-        unordered_map<char,char>mp;
+        char arr[26];
         char c='a';
         for(auto &it:order){
-            mp[it]=c;
+            arr[it-'a']=c;
             c++;
         }
-          for(auto &it:order){
-cout<<it<<" ";
-        }
+//           for(auto &it:order){
+// cout<<it<<" ";
+//         }
         for(auto &it1:words){
             for(auto &it2:it1){
-                it2=mp[it2];
+                it2=arr[it2-'a'];
             }
         }
         // vector<string> w(words.begin(),words.end());
