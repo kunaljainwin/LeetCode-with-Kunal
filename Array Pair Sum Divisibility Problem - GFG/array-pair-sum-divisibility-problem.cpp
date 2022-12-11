@@ -12,22 +12,50 @@ class Solution {
             it=it%k;
             // cout<<it<<" ";
         }
-        //sort+two sum (sum=0 or sum==k) 
-        sort(nums.begin(),nums.end());
-        int l=0,r=n-1;
-        while(l<n-1&&nums[l]==0&&nums[l+1]==0){
-            l+=2;
+        
+        map<int,int>mp;
+        for(auto &it:nums){
+            mp[it]++;
         }
-        while(l<r){
-            int sum=nums[l]+nums[r];
-            if(sum%k!=0){
+        for(auto &it:mp){
+            if(it.first==0){
+                if(it.second%2!=0){
+                    return false;
+                }
+                continue;
+            }
+            else if(it.second!=mp[k-it.first]){
                 return false;
             }
-            l++;
-            r--;
         }
-        
         return true;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //sort+two sum (sum=0 or sum==k) 
+        // sort(nums.begin(),nums.end());
+        // int l=0,r=n-1;
+        // while(l<n-1&&nums[l]==0&&nums[l+1]==0){
+        //     l+=2;
+        // }
+        // while(l<r){
+        //     int sum=nums[l]+nums[r];
+        //     if(sum%k!=0){
+        //         return false;
+        //     }
+        //     l++;
+        //     r--;
+        // }
+        
+        // return true;
     }
 };
 
